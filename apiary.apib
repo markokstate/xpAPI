@@ -1,0 +1,60 @@
+FORMAT: 1A
+HOST: http://ap1.spiderlog.net
+
+# Spider Log
+
+Provides spider services
+
+# Group Spiders
+Access to spider resources
+
+## My Spiders [/spiders{?page,size}]
+### Get all my spider sightings [GET]
+
++ Parameters
+    + page: '1' (required, number) - page number
+    + size: '10' (required, number) - page size
++ Request
+
+    + Header
+    
+            Authorization: Basic dXNlcjpwYXNzd29yZA==
+            
++ Response 200 (application/json)
+    
+        {
+            "page" :
+            {
+                "number" : 1,
+                "size" : 10,
+                "totalPages" : 20
+            },
+            "spiders" :
+            [
+                {
+                    "sightedAt" : "2014-08-29T97:09",
+                    "imageUrl" : "https://upload.wikimedia.org/wikipedia/commons/d/d8/Lace_Webbed_Spider,_Amaurobius_Similis,_2009.jpg",
+                    "description" : "Spder I saw on the train",
+                    "tags": [ 
+                        "stripy"
+                    ]
+                },
+                {
+                    "sightedAt" : "2014-08-28T97:09",
+                    "imageUrl" : "https://upload.wikimedia.org/wikipedia/commons/d/d8/Lace_Webbed_Spider,_Amaurobius_Similis,_2009.jpg",
+                    "description" : "Spder I saw at the office",
+                    "tags": [ 
+                        "big"
+                    ]
+                },
+                {
+                    "sightedAt" : "2014-08-27T97:09",
+                    "imageUrl" : "https://upload.wikimedia.org/wikipedia/commons/d/d8/Lace_Webbed_Spider,_Amaurobius_Similis,_2009.jpg",
+                    "description" : "Spder I saw at the my wedding",
+                    "tags": [ 
+                        "stripy",
+                        "big"
+                    ]
+                },
+            ]
+        }
