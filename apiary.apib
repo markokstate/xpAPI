@@ -21,40 +21,47 @@ Access to spider resources
             Authorization: Basic dXNlcjpwYXNzd29yZA==
             
 + Response 200 (application/json)
-    
-        {
-            "page" :
+
+    + Header
+
+            ETag: : "euyfewuyfvew76f7"
+            cache-control: max-age=600
+            
+    + Body
+
             {
-                "number" : 1,
-                "size" : 10,
-                "totalPages" : 20
-            },
-            "spiders" :
-            [
+                "page" :
                 {
-                    "sightedAt" : "2014-08-29T97:09",
-                    "imageUrl" : "https://upload.wikimedia.org/wikipedia/commons/d/d8/Lace_Webbed_Spider,_Amaurobius_Similis,_2009.jpg",
-                    "description" : "Spder I saw on the train",
-                    "tags": [ 
-                        "stripy"
-                    ]
+                    "number" : 1,
+                    "size" : 10,
+                    "totalPages" : 20
                 },
-                {
-                    "sightedAt" : "2014-08-28T97:09",
-                    "imageUrl" : "https://upload.wikimedia.org/wikipedia/commons/d/d8/Lace_Webbed_Spider,_Amaurobius_Similis,_2009.jpg",
-                    "description" : "Spder I saw at the office",
-                    "tags": [ 
-                        "big"
-                    ]
-                },
-                {
-                    "sightedAt" : "2014-08-27T97:09",
-                    "imageUrl" : "https://upload.wikimedia.org/wikipedia/commons/d/d8/Lace_Webbed_Spider,_Amaurobius_Similis,_2009.jpg",
-                    "description" : "Spder I saw at the my wedding",
-                    "tags": [ 
-                        "stripy",
-                        "big"
-                    ]
-                },
-            ]
-        }
+                "spiders" :
+                [
+                    {
+                        "sightedAt" : "2014-08-29T97:09",
+                        "imageUrl" : "https://upload.wikimedia.org/wikipedia/commons/d/d8/Lace_Webbed_Spider,_Amaurobius_Similis,_2009.jpg",
+                        "description" : "Spder I saw on the train",
+                        "tags": [ 
+                            "stripy"
+                        ]
+                    },
+                    {
+                        "sightedAt" : "2014-08-28T97:09",
+                        "imageUrl" : "https://upload.wikimedia.org/wikipedia/commons/d/d8/Lace_Webbed_Spider,_Amaurobius_Similis,_2009.jpg",
+                        "description" : "Spder I saw at the office",
+                        "tags": [ 
+                            "big"
+                        ]
+                    },
+                    {
+                        "sightedAt" : "2014-08-27T97:09",
+                        "imageUrl" : "https://upload.wikimedia.org/wikipedia/commons/d/d8/Lace_Webbed_Spider,_Amaurobius_Similis,_2009.jpg",
+                        "description" : "Spder I saw at the my wedding",
+                        "tags": [ 
+                            "stripy",
+                            "big"
+                        ]
+                    },
+                ]
+            }
